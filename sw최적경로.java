@@ -44,6 +44,7 @@ public class 최적경로 {
 		for(int i=0;i<N;i++) {
 			if(visited[i]) continue;
 			int dis =  Math.abs(x-map[i][0])+Math.abs(y-map[i][1]);
+			 if(dis+distance>result) continue;
 			visited[i]= true; 
 			dfs(map[i][0], map[i][1], depth+1, distance+dis);
 			visited[i]=false; 
